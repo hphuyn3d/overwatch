@@ -1,0 +1,74 @@
+$max-width: 1200px; //match psds
+$nav-height: 140px;
+$nav-index: 999;
+
+
+/* Color palette */
+$orange:#d56127;
+$red:#d34727;
+$yellow:#d9ab28;
+$teal:#009ca7;
+$pale_teal:#68a2a6;
+$seagreen:#b4be35;
+$green:#4db045;
+$dark_blue:#1e252b;
+$dark_blue_tsp:rgba(30,37,43,0.98);
+$dark_blue_overlay:rgba(30,37,43,0.6);
+$gray:#c1b8af;
+$text_gray:#696e72;
+$text_light_gray:#8e9295;
+$text_lighter_gray:#999ea2;
+$black:#000;
+$white:#fff;
+
+//default neat grid
+$neat-grid: (
+  columns:12,
+  gutter:0px,
+);
+
+$custom-grid--thirds: (
+  columns: 3,
+  gutter: 60px,
+);
+
+
+//Breakpoints
+//based on max-width
+$bp_mobile_px:768px;
+$bp_mobile_height_px:475px;
+$bp_tablet_px:1024px;
+$bp_desktop_px:1280px;
+
+//neat breakpoints (Neat, breakpoints!)
+$bp_mobile: (
+    columns:12,
+    gutter:0px,
+    media: 'screen and (max-width: #{$bp_mobile_px})'
+);
+$bp_mobile_landscape: (
+    columns:12,
+    gutter:0px,
+    media: 'screen and (max-width: #{$bp_mobile_px}) and ( max-height: #{$bp_mobile_height_px})'
+);
+$bp_tablet: (
+    columns:12,
+    gutter:0px,
+    media: 'screen and (max-width: #{$bp_tablet_px})'
+);
+$bp_desktop: (
+    columns:12,
+    gutter:0px,
+    media: 'screen and (max-width: #{$bp_desktop_px})'
+);
+$bp_desktop_plus: (
+    columns:12,
+    gutter:0px,
+    media: 'screen and (min-width: #{$bp_desktop_px})'
+);
+
+@mixin site-width {
+  max-width:$max-width;
+  width:100%;
+  margin:0 auto;
+}
